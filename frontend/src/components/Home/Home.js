@@ -7,10 +7,10 @@ import {
   TextField,
   Button,
   Paper,
+  Chip,
 } from "@material-ui/core";
 import { useDispatch } from "react-redux";
 import { useLocation, useNavigate } from "react-router-dom";
-import ChipInput from "material-ui-chip-input";
 
 import { getPostsBySearch } from "../../actions/posts";
 import Posts from "../Posts/Posts";
@@ -84,7 +84,7 @@ const Home = () => {
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
               />
-              <ChipInput
+              <Chip
                 style={{ margin: "10px 0" }}
                 value={tags}
                 onAdd={(chip) => handleAddChip(chip)}

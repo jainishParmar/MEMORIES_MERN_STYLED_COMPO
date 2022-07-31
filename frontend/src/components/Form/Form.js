@@ -1,9 +1,8 @@
 import React, { useState, useEffect } from "react";
-import { TextField, Button, Typography, Paper } from "@material-ui/core";
+import { TextField, Button, Typography, Paper, Chip } from "@material-ui/core";
 import { useDispatch, useSelector } from "react-redux";
 import FileBase from "react-file-base64";
 import { useNavigate } from "react-router-dom";
-import ChipInput from "material-ui-chip-input";
 
 import { createPost, updatePost } from "../../actions/posts";
 import useStyles from "./style";
@@ -102,7 +101,7 @@ const Form = ({ currentId, setCurrentId }) => {
           }
         />
         <div style={{ padding: "5px 0", width: "94%" }}>
-          <ChipInput
+          <Chip
             name="tags"
             variant="outlined"
             label="Tags"
